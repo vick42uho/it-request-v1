@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+/* Reset and Base Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sarabun', sans-serif;
+    /* Use a clean, responsive font */
+}
+
+
+
+/* Main Container Style */
+/* #root {
+    max-width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+} */
+
+/* Nav Styles */
+/* Nav Styles */
+/* Style for the entire navigation bar */
+nav {
+    position: fixed; /* Fixes the element to the viewport */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Aligns it to the right */
+    z-index: 1000; /* Ensures it stays above other content */
+    padding: 10px 20px; /* Adds some padding for spacing */
+
+
+}
+
+
+/* Style for the card inside the nav */
+
+/* Optional: Style for the Menubar itself to ensure it doesn't stretch */
+/* nav .bar .p-menubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+} */
+
+/* Media query for screens with max-width of 960px */
+@media screen and (max-width: 960px) {
+    /* Adjust the menubar to align left */
+    nav .bar .p-menubar {
+        justify-content: flex-start; /* Align content to the left */
+        padding: 0 10px; /* Optional: Add some padding to ensure it's not right at the edge */
+    }
+
+    /* Ensure the menubar buttons align to the left */
+    nav .bar .p-menubar .p-menubar-start {
+        margin-right: auto; /* Move the start section to the left */
+    }
+
+    /* Hide the right-side items (if any) on small screens */
+    nav .bar .p-menubar .p-menubar-end {
+        display: none;
+    }
+}
+
+
+/* Ensure the Dock is positioned properly on the left */
+.menu-bar-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    z-index: 1000;
+    /* Ensure it is above other elements */
+}
+
+/* Adjusting Dock's position and alignment */
+.p-dock-left {
+    left: 0;
+    /* Align dock to the left */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust centering */
+    height: auto;
+    /* Adjust height */
+}
+
+.p-dock {
+    width: auto;
+    /* Ensure it does not stretch horizontally */
+}
+
+/* Optional: Adjust the overall appearance */
+.p-dock-container {
+    background-color: transparent;
+    /* Make dock background transparent if needed */
+    box-shadow: none;
+    /* Remove any default shadows */
+}
+
+/* Responsive Design */
+/* Large screens (desktops and larger laptops) */
+@media (min-width: 1200px) {
+    #root {
+        max-width: 80%;
+        padding: 10px;
+        /* Ensure some padding for large screens */
+    }
+
+    .responsive-component {
+        max-width: 60%;
+        padding: 20px;
+        /* Consistent padding for larger screens */
+    }
+
+    .responsive-component p {
+        font-size: 1rem;
+        line-height: 1.6;
+        /* Slightly larger text for readability */
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    #root {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .responsive-component {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .responsive-component p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* Small screens (phones and small tablets) */
+@media (max-width: 767px) {
+    #root {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .responsive-component {
+        max-width: 100%;
+        padding: 10px;
+        /* Reduce padding for small screens */
+    }
+
+    .responsive-component p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        /* Adjust font size and line height for better readability */
+    }
+}
+
+/* Example of responsive component */
+.responsive-component {
+    width: 100%;
+    /* Full width for better adaptability */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
